@@ -15,6 +15,7 @@ export default function Home() {
   const aboutref = useRef(null);
   const aboutisInView = useInView(aboutref, { once: false });
   const typedref = useRef(null)
+  // const typedmobileref = useRef(null)
 
   useEffect(() => {
 
@@ -26,9 +27,18 @@ export default function Home() {
       startDelay: 250,
       backDelay: 2000,
     })
+    // const typedmobile = new Typed(typedmobileref.current, {
+    //   strings: ['', 'Software Developer .', 'Engineer .', 'Student .', 'Programmer .', ''],
+    //   typeSpeed: 50,
+    //   loop: true,
+    //   loopCount: Infinity,
+    //   startDelay: 250,
+    //   backDelay: 2000,
+    // })
 
     return () => {
       typed.destroy()
+      // typedmobile.destroy()
     }
 
   }, [])
@@ -96,8 +106,10 @@ export default function Home() {
   <div className="max-w-[90vw] mx-auto">
       <div ref={homeref} id="Home" className="flex flex-col h-screen">
         <div className="flex flex-col gap-6 mt-[20%]">
-          <p className="text-6xl font-bold">Prathik Murthy <span className="text-blue-500" ref={typedref} /></p>
-          <nav className="flex flex-row gap-12 mt-4">
+          <div className="text-4xl tracking-wide md:tracking-normal md:text-6xl font-bold flex flex-col md:flex-row gap-3 items-center"><p>Prathik Murthy</p> <div className="flex text-2xl font-light md:font-bold md:text-6xl flex-row mt-[10vw] md:mt-0"><span className="text-blue-500" ref={typedref} /></div></div>
+          {/* <div className="visible md:invisible flex flex-col text-center text-4xl font-bold"><p>Prathik Murthy</p><div className="flex flex-row mx-auto text-2xl mt-8"><span className="text-blue-500 " ref={typedmobileref} /></div></div> */}
+          
+          <nav className="flex flex-row gap-12 mt-4 invisible md:visible">
             {Object.keys(elements).map((elt) => {
               if (elt === "Resume") {
                 return <a className="text-xl text-gray-300" target="_blank" href="resume.pdf" download>Resume</a>
@@ -105,13 +117,13 @@ export default function Home() {
               return <p className={elt !== "Home" ? "text-xl text-gray-300" : "text-xl text-blue-500 "}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
             })}
           </nav>
-          <div className="flex flex-row gap-16 mt-4 text-white">
+          <div className="flex flex-row justify-center md:justify-start gap-16 mt-0 md:mt-4 text-white">
             <a target="_blank" href="https://github.com/prathikmurthy"><IconBrandGithub width={50} height={50} /></a>
             <a target="_blank" href="https://www.linkedin.com/in/prathikmurthy/"><IconBrandLinkedin width={50} height={50} /></a>
           </div>
         </div>
       </div>
-      <div id="content" >
+      <div id="content" className="" >
           <NavBar /> 
           <div id="About" ref={aboutref} className="flex  h-screen mb-24 max-w-5xl" > 
             <div ref={aboutref} style={{
