@@ -94,7 +94,7 @@ export default function Home() {
   return (
   <div className="max-w-[80%] mx-auto">
       <div ref={homeref} id="Home" className="flex flex-col h-screen">
-        <div className="flex flex-col ml-24 gap-6 mt-[20%]">
+        <div className="flex flex-col gap-6 mt-[20%]">
           <p className="text-6xl font-bold">Prathik Murthy <span className="text-blue-500" ref={typedref} /></p>
           <nav className="flex flex-row gap-12 mt-4">
             {Object.keys(elements).map((elt) => {
