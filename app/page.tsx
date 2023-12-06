@@ -37,7 +37,7 @@ export default function Home() {
     "Home": "#2196F3", 
     "About": "#ffce39", 
     "Resume": "", 
-    "Projects": "#9C27B0", 
+    // "Projects": "#9C27B0", 
     "Contact": "#F44336"}
 
   useEffect(() => {
@@ -92,7 +92,7 @@ export default function Home() {
   }, []);
   
   return (
-  <div className="max-w-[80%] mx-auto">
+  <div className="max-w-[90vw] mx-auto">
       <div ref={homeref} id="Home" className="flex flex-col h-screen">
         <div className="flex flex-col gap-6 mt-[20%]">
           <p className="text-6xl font-bold">Prathik Murthy <span className="text-blue-500" ref={typedref} /></p>
@@ -110,18 +110,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="content" style={{
-        opacity: current === "Home" ? 0 : 1,
-        // transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
-      }}>
+      <div id="content" >
           <NavBar /> 
-          <div id="About" ref={aboutref} className="flex  h-screen mb-24 max-w-5xl" >
+          <div id="About" ref={aboutref} className="flex  h-screen mb-24 max-w-5xl" > 
             <div ref={aboutref} style={{
               transform: aboutisInView ? "none" : "translateY(-100px)",
               opacity: aboutisInView ? 1 : 0,
               transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
             }}>
-            <div className="flex flex-col ml-24 gap-12 mt-[20vh]">
+            <div className="flex flex-col ml-24 gap-12 mt-[20vh]" style={{
+              opacity: current == "About" ? 1 : 0
+            }}>
                 <div className="flex flex-row">
                   <p className="text-xl text-gray-400 font-bold tracking-widest">ABOUT</p>
                   <div className="ml-4 pr-64 mb-[1.5%] border-b-4" style={{borderColor: (elements as any)[current]}}></div>
@@ -129,6 +128,54 @@ export default function Home() {
               <p className="text-6xl font-bold" style={{ color: (elements as any)[current] }}>Hi, I'm Prathik !</p>
 
               <p className="text-xl leading-10">I'm a <span style={{ color: (elements as any)[current] }}>software developer</span> and engineer studying Computer Science at the <span style={{ color: (elements as any)[current] }}>University of Michigan </span> in Ann Arbor, MI.</p>
+
+              <p className="text-xl leading-10">Some languages and tools I have experience with are:</p>
+
+              <div className="grid grid-cols-2" ref={aboutref} style={{
+                transform: aboutisInView ? "none" : "translateY(-100px)",
+                opacity: aboutisInView ? 1 : 0,
+                transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.75s"
+              }}> 
+                <div>
+                  <ul className="list-disc gap-y-12 list-inside leading-10 " >
+                    <span style={{ color: (elements as any)[current] }} className="underline underline-offset-8">Programming Languages</span>
+                    <li className="">
+                      TypeScript / JavaScript
+                    </li>
+                    <li className="">
+                      C++
+                    </li>
+                    <li className="">
+                      Python
+                    </li>
+                    <li className="">
+                      SQL
+                    </li>
+
+                  </ul>
+                </div>
+                <div>
+                  <ul className="list-disc gap-y-12 list-inside leading-10" >
+                    <span style={{ color: (elements as any)[current] }} className="underline underline-offset-8">Tools</span>
+                    <li className="">
+                      Microsoft Azure
+                    </li>
+                    <li className="">
+                      Autodesk Inventor / Solidworks / OnShape
+                    </li>
+                    <li className="">
+                      Git
+                    </li>
+                    <li className="">
+                      AGILE
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
                 {/* <p className="text-3xl font-light">I am a <span className="text-blue-500">Coder </span></p> */}
               </div>
             </div>
