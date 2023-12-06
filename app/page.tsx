@@ -167,7 +167,7 @@ export default function Home() {
                       Git
                     </li>
                     <li className="">
-                      AGILE
+                      React / NextJS / Vue / Svelte
                     </li>
 
                   </ul>
