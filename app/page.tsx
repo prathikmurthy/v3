@@ -55,7 +55,7 @@ export default function Home() {
         <nav className="flex flex-row gap-12 ">
           {Object.keys(elements).map((elt: string) => {
             if (elt === "Resume") {
-              return <a className="text-xl text-gray-300" target="_blank">Resume</a>
+              return <a className="text-xl text-gray-300" target="_blank" href="resume.pdf" download>Resume</a>
             }
             return <p className={elt !== current ? "text-xl text-gray-300" : "text-xl"} style={{
               color: elt !== current ? "#FFFFFF" : "#2196F3"
