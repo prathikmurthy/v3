@@ -117,9 +117,9 @@ export default function Home() {
               return <p className={elt !== "Home" ? "text-xl text-gray-300" : "text-xl text-blue-500 "}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
             })}
           </nav>
-          <div className="flex flex-row justify-center md:justify-start gap-16 mt-0 md:mt-4 text-white">
-            <a target="_blank" href="https://github.com/prathikmurthy"><IconBrandGithub width={50} height={50} /></a>
-            <a target="_blank" href="https://www.linkedin.com/in/prathikmurthy/"><IconBrandLinkedin width={50} height={50} /></a>
+          <div className="flex flex-row justify-center md:justify-start gap-16 mt-0 md:mt-4  ">
+            <a className="text-white hover:text-blue-500 transition-all" target="_blank" href="https://github.com/prathikmurthy"><IconBrandGithub width={50} height={50} /></a>
+            <a className="text-white hover:text-blue-500 transition-all" target="_blank" href="https://www.linkedin.com/in/prathikmurthy/"><IconBrandLinkedin width={50} height={50} /></a>
           </div>
         </div>
       </div>
