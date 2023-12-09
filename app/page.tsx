@@ -107,14 +107,13 @@ export default function Home() {
       <div ref={homeref} id="Home" className="flex flex-col h-screen">
         <div className="flex flex-col gap-6 mt-[20%]">
           <div className="text-4xl tracking-wide md:tracking-normal md:text-6xl font-bold flex flex-col md:flex-row gap-3 items-center"><p>Prathik Murthy</p> <div className="flex text-2xl font-light md:font-bold md:text-6xl flex-row mt-[10vw] md:mt-0"><span className="text-blue-500" ref={typedref} /></div></div>
-          {/* <div className="visible md:invisible flex flex-col text-center text-4xl font-bold"><p>Prathik Murthy</p><div className="flex flex-row mx-auto text-2xl mt-8"><span className="text-blue-500 " ref={typedmobileref} /></div></div> */}
           
           <nav className="flex flex-row gap-12 mt-4 invisible md:visible">
             {Object.keys(elements).map((elt) => {
               if (elt === "Resume") {
                 return <a className="text-xl text-gray-300" target="_blank" href="resume.pdf" download>Resume</a>
               }
-              return <p className={elt !== "Home" ? "text-xl text-gray-300" : "text-xl text-blue-500 "}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
+              return <p className={elt !== "Home" ? "text-xl text-gray-300" : "text-xl text-blue-500"}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
             })}
           </nav>
           <div className="flex flex-row justify-center md:justify-start gap-16 mt-0 md:mt-4  ">
