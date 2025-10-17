@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
               <p className="text-6xl font-bold" style={{ color: (elements as any)[current] }}>Hi, I'm Prathik !</p>
 
-              <p className="text-xl leading-10">I'm a <span style={{ color: (elements as any)[current] }}>software developer</span> and engineer studying Computer Science at the <span style={{ color: (elements as any)[current] }}>University of Michigan </span> in Ann Arbor, MI.</p>
+              <p className="text-xl leading-10">I'm a <span style={{ color: (elements as any)[current] }}>full-stack software developer</span> and engineer at <span style={{ color: (elements as any)[current] }}>Procter & Gamble</span>, <br />and a <span style={{ color: (elements as any)[current] }}>University of Michigan </span> alum with a degree in Computer Science.</p>
 
               <p className="text-xl leading-10">Some languages and tools I have experience with are:</p>
 
@@ -161,7 +161,7 @@ export default function Home() {
                       Python
                     </li>
                     <li className="">
-                      SQL
+                      Java
                     </li>
 
                   </ul>
@@ -173,13 +173,13 @@ export default function Home() {
                       Microsoft Azure
                     </li>
                     <li className="">
-                      Autodesk Inventor / Solidworks / OnShape
+                      Database Design / Management
                     </li>
                     <li className="">
-                      Git
+                      Infrastructure as Code
                     </li>
                     <li className="">
-                      React / NextJS / Vue / Svelte
+                      API Design / Development
                     </li>
 
                   </ul>
