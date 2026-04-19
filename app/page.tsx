@@ -47,6 +47,7 @@ export default function Home() {
     "Home": "#2196F3", 
     "About": "#ffce39", 
     "Resume": "", 
+    "Blog": ""
     // "Projects": "#9C27B0", 
     // "Contact": "#F44336"
   }
@@ -112,6 +113,9 @@ export default function Home() {
             {Object.keys(elements).map((elt) => {
               if (elt === "Resume") {
                 return <a className="text-xl text-gray-300" target="_blank" href="resume.pdf" download>Resume</a>
+              }
+              if (elt === "Blog") {
+                return <a className="text-xl text-gray-300" target="_blank" href="https://blog.prathikm.dev/">Blog</a>
               }
               return <p className={elt !== "Home" ? "text-xl text-gray-300" : "text-xl text-blue-500"}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
             })}
