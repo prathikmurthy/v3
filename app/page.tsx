@@ -68,6 +68,10 @@ export default function Home() {
             if (elt === "Resume") {
               return <a className="text-xl text-gray-300" target="_blank" href="resume.pdf" download>Resume</a>
             }
+
+            if (elt === "Blog") {
+                return <a className="text-xl text-gray-300" target="_blank" href="https://blog.prathikm.dev/">Blog</a>
+            }
             return <p className={elt !== current ? "text-xl text-gray-300" : "text-xl"} style={{
               color: elt !== current ? "#FFFFFF" : "#2196F3"
             }}><Link activeClass="active" to={elt} smooth={true} duration={100} onClick={() => setCurrent(elt)}>{elt}</Link></p>
