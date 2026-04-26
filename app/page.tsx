@@ -46,8 +46,8 @@ export default function Home() {
   const elements = {
     "Home": "#2196F3", 
     "About": "#ffce39", 
-    "Resume": "", 
-    "Blog": ""
+    // "Resume": "", 
+    // "Blog": ""
     // "Projects": "#9C27B0", 
     // "Contact": "#F44336"
   }
